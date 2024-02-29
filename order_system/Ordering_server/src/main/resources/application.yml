@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    #                   localhost가 아니라 도커를 실행하는 워크 스페이스에서 실행한다는 말
+    url: jdbc:mariadb://host.docker.internal:3306/order_system
+    username: root
+    password: 1234
+  jpa:
+    show-sql: true
+    database: mysql
+    database-platform: org.hibernate.dialect.MariaDBDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+jwt:
+    expiration: 30 #30분
+    secretKey: mysecret
+
+#    ??? ?? ?? sql?? ??? ??
